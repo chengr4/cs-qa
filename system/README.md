@@ -1,5 +1,8 @@
 # System
 
+- [Hypervisor](#hypervisor)
+- [I/O]()
+
 ## How to build a googd system?
 
 1. 儘可能的優化單機性能 (CPU, memory)
@@ -11,6 +14,20 @@
 - 熟悉工具
   - eg redis prevides some data structures, do not pick up the wrong one
 - Choose right data structure
+
+## I/O
+
+Q: What is I/O?
+
+A:
+
+- two types: 文件 I/O, 網路 I/O
+
+> 緩衝區: 就是指在某個記憶體中，切割一些空間出來，來當緩衝區
+
+### Zero-copy 
+
+
 
 
 ## Hypervisor
