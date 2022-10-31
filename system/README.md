@@ -1,7 +1,8 @@
 # System
 
 - [Hypervisor](#hypervisor)
-- [I/O]()
+- [I/O](#io)
+- [Coroutine](#coroutine)
 
 ## How to build a googd system?
 
@@ -27,9 +28,6 @@ A:
 
 ### Zero-copy 
 
-
-
-
 ## Hypervisor
 
 ### What is a hypervisor?
@@ -41,3 +39,9 @@ A:
 ### Why write a HV?
 
 - Learn more about CPUs
+
+## Coroutine
+
+- lighter than thread
+- 它是純應用端的執行單位，作業系統完全不知道它
+- 它與 thread 一樣都有自已的記憶體空間
