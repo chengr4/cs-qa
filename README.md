@@ -2,6 +2,7 @@
 
 - [System](./system/)
 - [Javascript](#javascript)
+- [C/C++](#c)
 - [Internet](#internet)
 - [Theory + Implementation](#theory-plus-implementation)
 
@@ -10,6 +11,14 @@
 Q: 誰定義了 let, const 代表宣告
 
 A: TC39
+
+## 
+
+## C/C++
+
+Q: What can C++ do?
+
+A: EDA, HFT, 自駕車, ML serving, inference, Database, MQ, compiler, Browser, media encoding, network stack
 
 ## Internet
 
