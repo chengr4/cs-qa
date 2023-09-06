@@ -3,6 +3,7 @@
 - [Hypervisor](#hypervisor)
 - [I/O](#io)
 - [Coroutine](#coroutine)
+- [Memory](#memory)
 
 ## How to build a googd system?
 
@@ -16,11 +17,20 @@
   - eg redis prevides some data structures, do not pick up the wrong one
 - Choose right data structure
 
+## Meomry
+
+Data structure 的 heap 和 memory 的 heap 是同個概念嗎？
+
+不是，他們是不同概念：
+
+- Memory Heap
+  - 當你要將資料放入 Memory Heap ，你得要求一定大小的空間。記憶體配置器（memory allocator）會找到一塊夠大的空位，標記為已佔用，然後回傳一個指標（pointer），指著該位置的位址。
+  - 指沒特定排序的記憶體空間 
+- Priority Queue (Heap)
+
 ## I/O
 
-Q: What is I/O?
-
-A:
+What is I/O?
 
 - two types: 文件 I/O, 網路 I/O
 
