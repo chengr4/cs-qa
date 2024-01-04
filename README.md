@@ -34,6 +34,12 @@ A: ![Image not display](./images/Internet.jpg)
 
 > by [陳鍾誠教授 (2022)](https://github.com/ccckmit)
 
+## Git
+
+Q: how to contribute others fork?
+
+A: https://stackoverflow.com/questions/76845228/github-fork-attempt-says-no-available-destinations-to-fork-this-repository
+
 ## Resources
 
 1. https://www.ptt.cc/bbs/Soft_Job/M.1640090008.A.A88.html
