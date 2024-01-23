@@ -22,11 +22,20 @@ Eg. Oracle JDBC driver for Java, pq for Golang
 
 ### Case 1:
 
-- env: PostgreSQL (Read Committed)
-- condition: A table and B table has foreign key to A table
-- keyword: `UPDATE`/`INSERT` + `SELECT ... FOR UPDATE`
+- ENV: PostgreSQL (Read Committed)
+- Condition: A table and B table has foreign key to A table
+- Keyword: `UPDATE`/`INSERT` + `SELECT ... FOR UPDATE`
 
 if B table is updated (X lock) in TX B, and A table is selcted for update (X Lock) in TX A and, then B table is selected for update (X Lock) in TX B, then dead lock will happen. (TX A wait for TX B and TX B wait for TX A)
+
+- Solution:
+
+```sql
+    SELECT * FROM account
+    WHERE id = $1
+    LIMIT 1
+    FOR NO KEY UPDATE; <!-- Not update the key or ID of the column => Not affect on other table -->
+```
 
 ## Q: How to avoid dead lock?
 
@@ -35,6 +44,6 @@ if B table is updated (X lock) in TX B, and A table is selcted for update (X Loc
     SELECT * FROM account
     WHERE id = $1
     LIMIT 1
-    FOR NO KEY UPDATE; <!-- Not update the key or ID of the column => Not affect foreign key of other table  -->
+    FOR NO KEY UPDATE; <!-- Not update the key or ID of the column => Not affect on other table -->
     ```
 2. update data in a consistent order (eg small ID first)
