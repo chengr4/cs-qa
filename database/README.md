@@ -39,11 +39,12 @@ if B table is updated (X lock) in TX B, and A table is selcted for update (X Loc
 
 ## Q: How to avoid dead lock?
 
-1. `FOR NO KEY UPDATE;`
+1. Be care for when you update or insert table in a transaction
+2. `FOR NO KEY UPDATE;`
     ```sql
     SELECT * FROM account
     WHERE id = $1
     LIMIT 1
     FOR NO KEY UPDATE; <!-- Not update the key or ID of the column => Not affect on other table -->
     ```
-2. update data in a consistent order (eg small ID first)
+3. Always update data in a consistant order (eg small ID first)
